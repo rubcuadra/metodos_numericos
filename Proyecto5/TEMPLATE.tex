@@ -1,0 +1,76 @@
+\documentclass{report}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{codeColor}{rgb}{0.4, 0.6, 0.8}
+\lstset{keywordstyle=\color{codeColor},language=Octave,stepnumber=1,basicstyle=\footnotesize}
+
+\usepackage{enumitem}
+
+\newenvironment{steps}[1]{\begin{enumerate}[label=#1 \arabic*]}{\end{enumerate}}
+
+\makeatletter
+\def\step{
+   \@ifnextchar[ \@step{\@noitemargtrue\@step[\@itemlabel]}}
+\def\@step[#1]{\item[#1]\mbox{}\\\hspace*{\dimexpr-\labelwidth-\labelsep}}
+\makeatother
+
+\begin{document}
+
+\title{ Solucion de Ecuaciones No Lineales}
+\author{Rubén Cuadra A01019102}
+
+\maketitle
+\begin{abstract}
+	Manual de usuario:  'gaussJordan.m', el objetivo de este texto es documentar la implementacion del metodo gaussJordan como metodo para encontrar solucion a ecuaciones asi como calcular inversas.
+\end{abstract}
+
+\section{Introduccion}
+	El codigo consiste en un archivo llamado de la misma manera que la funcion el cual recibe 3 argumentos y nos regresa 4 respuestas
+\lstinputlisting[ firstline=1, lastline=1]{gaussJordan.m}
+
+	\textbf{A}  Es una matriz de nxn que representa los coeficientes del sistema de ecuaciones
+		
+	\textbf{b} Es un vector de nx1 que es el vector de terminos independientes  
+
+	\textbf{op} Es una bandera True(1) o False(0), cuando es verdaera resuelve el sistema y regresa el vector de soluciones, cuando es falso regresa la inversa y el determinante.
+
+\section{Comprension del algoritmo}
+	
+\subsection{Gauss-Jordan}
+Realiza una serie de operaciones elementales de matrices sobre una matriz extendida, para convertir una matriz de nxn en la identidad, generando asi un vector/matriz resultado  
+
+El algoritmo usado es: 
+
+\begin{steps}{Paso}
+\step Inicializar retornos
+\step Validamos que sea una matriz nxn 
+\step Calculamos determinante usando $det = [A*adj(A)][i,i]$
+\step Si no es invertible regresar 
+\step IF para ver si regresaremos Inversa o la Solucion del sistema de ecuaciones
+\step Ambos casos realizan eliminacion Gausseana, uno se manda a llamar con el vector A y \textbf{b} y otra con A y la identidad
+\step Generamos matriz expandida
+\step Usamos cambios de renglon para quitar todos los 0s de la diagonal principal
+\step Se obtiene el elemento i,i y se realiza multiplicacion de escalar y suma de renglon para convertir en 0 los numeros debajo de el
+\step Cuando se llega a i=m debemos realizar el paso anterior pero ahora con los elementos sobre la diagonal
+\step  En este punto tenemos una diagonal y todo lo demas en 0, realizamos multiplicacion de escalar por renglon para convertir el numero de la diagonal en 0
+\step  A esta altura la parte expandida se vio afectada por las operaciones y tendremos como resultado la matriz inversa o en su defecto, un vector con resultados del sistema
+\step  Regresar valores de exito
+
+\end{steps}
+Al final se regresan 4 valores,   \textbf{x} ,  \textbf{matrizInversa},  \textbf{d},  \textbf{solucion}
+\section{Ejemplo}
+Mandamos a llamar la funcion desde un archivo main.m.
+Usando los argumentos: 
+\lstinputlisting[language=Octave,firstline=1,lastline=6]{main.m}
+Llamamos la funcion:
+\lstinputlisting[language=Octave,firstline=7,lastline=7]{main.m}
+y nos devolveria
+\lstinputlisting[language=Octave,firstline=9,lastline=15]{main.m}
+
+\section{Conclusion}
+Es un modulo portable que posee varias excepciones, esta facil de implementar y todo bien bien comentado
+\footnotetext{Los acentos no se pudieron agregar por cuestion de la codificacion}
+
+\end{document}

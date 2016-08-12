@@ -1,0 +1,179 @@
+# Created by Octave 4.0.0, Wed Apr 06 07:47:04 2016 CDT <Ruben@Rubens-MacBook.local>
+# name: A1
+# type: matrix
+# rows: 3
+# columns: 3
+ 4 1 -1
+ 2 5 0
+ 3 8 9
+
+
+# name: b1
+# type: matrix
+# rows: 3
+# columns: 1
+ 8
+ 5
+ 0
+
+
+# name: A2
+# type: matrix
+# rows: 3
+# columns: 3
+ 3.4444 16100 -9.1
+ 1.9999 17.01 9.6
+ 1.6 5.2 1.7
+
+
+# name: b2
+# type: matrix
+# rows: 3
+# columns: 1
+ 0
+ 1
+ 0
+
+
+# name: A3
+# type: matrix
+# rows: 3
+# columns: 3
+ 5.8 3.2 11.24
+ 4.3 3.4 9.625
+ 2.5 5.2 9.625
+
+
+# name: b3
+# type: matrix
+# rows: 3
+# columns: 1
+ 20.24
+ 17.325
+ 17.325
+
+
+# name: A4
+# type: matrix
+# rows: 4
+# columns: 4
+ 4 5 2 -1
+ 5 8 7 6
+ 3 7 -4 -2
+ -1 6 -2 5
+
+
+# name: b4
+# type: matrix
+# rows: 4
+# columns: 1
+ 2
+ 3
+ 0
+ 1
+
+
+# name: A5
+# type: matrix
+# rows: 4
+# columns: 4
+ 2.156 4.102 -2.3217 6
+ -4.102 6 0 1.2
+ -1 -5.7012 1.2222 0
+ 6.532 7 0 -4
+
+
+# name: b5
+# type: matrix
+# rows: 4
+# columns: 1
+ 18
+ 6.5931
+ 3.4
+ 0
+
+
+# name: A_EliminacionGauss
+# type: matrix
+# rows: 3
+# columns: 1
+ 1.708074534161491
+ 0.3167701863354037
+ -0.8509316770186335
+
+
+# name: B_EliminacionGauss
+# type: matrix
+# rows: 3
+# columns: 1
+ -0.1423245530197187
+ 0.0001059776836570097
+ 0.1336283534567843
+
+
+# name: E_GaussPivot
+# type: matrix
+# rows: 4
+# columns: 1
+ 1.935245014215622
+ 1.325823323266117
+ 10.54985186125054
+ 5.480445923929815
+
+
+# name: C_GaussJordan
+# type: matrix
+# rows: 3
+# columns: 1
+ 1.000000000000048
+ 1.000000000000048
+ 0.9999999999999618
+
+
+# name: D_GaussJordan
+# type: matrix
+# rows: 4
+# columns: 1
+ -3.126984126984126
+ 1.92063492063492
+ 1.984126984126984
+ -1.936507936507936
+
+
+# name: A_Jacobi
+# type: matrix
+# rows: 3
+# columns: 1
+ 1.708074534147785
+ 0.3167701870383393
+ -0.8509316799637188
+
+
+# name: B_Jacobi
+# type: matrix
+# rows: 3
+# columns: 1
+ -1.195625040300231e+37
+ -6.427301606656207e+34
+ -4.420089350255949e+35
+
+
+# name: C_GaussSeidel
+# type: matrix
+# rows: 3
+# columns: 1
+ 1.000000000000002
+ 1.000000000000001
+ 0.9999999999999991
+
+
+# name: D_GaussSeidel
+# type: matrix
+# rows: 4
+# columns: 1
+ -3.126984125590501
+ 1.920634918766822
+ 1.984126984490326
+ -1.936507933842156
+
+
